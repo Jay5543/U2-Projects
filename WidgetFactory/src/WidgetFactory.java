@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class WidgetFactory {
 
     /*
@@ -28,4 +30,45 @@ public class WidgetFactory {
      Profit: $760.00
 
      */
+
+    //Plan
+    /*
+    Make methods
+    number of days
+    number od widgets
+    cost of widgets
+    cost of production
+    profit
+    output
+     */
+
+    public static void main(String[] args) {
+        int widgetsMade = Integer.parseInt(JOptionPane.showInputDialog(null, "How many widgets were made?"));
+        int numbersOfDays = widgetsMade / 160;
+        double widgetCost = widgetsMade * 10;
+        double productionCost = numbersOfDays * 10 * 8 * 16.50;
+        double amountOfProfit = widgetCost - productionCost;
+
+        numberOfWidgets(widgetsMade);
+        numberOfDaysMethod(numbersOfDays);
+        costOfWidgets(widgetCost);
+        costOfProduction(productionCost);
+        profits(amountOfProfit);
+
+    }
+    public static void numberOfDaysMethod(int numberOfDays){
+        JOptionPane.showMessageDialog(null, "The number of days is: " + numberOfDays);
+    }
+    public static void numberOfWidgets(int widgetsMade){
+        JOptionPane.showMessageDialog(null, "The amount of Widgets made were: " + widgetsMade);
+    }
+    public static void costOfWidgets(double widgetsCost){
+        JOptionPane.showMessageDialog(null, "Cost of all the widgets is : $" + widgetsCost);
+    }
+    public static void costOfProduction(double productionCost){
+        JOptionPane.showMessageDialog(null, "The cost of the production is: $" + productionCost);
+    }
+    public static void profits(double amountOfProfit){
+        JOptionPane.showMessageDialog(null, "Your profits is: $" + amountOfProfit);
+    }
 }
